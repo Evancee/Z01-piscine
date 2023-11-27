@@ -1,2 +1,1 @@
-#!/bin/bash
-echo "Hello evomond!"
+echo Hello evomond!
