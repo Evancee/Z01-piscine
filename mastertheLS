@@ -1,1 +1,1 @@
-ls -l -a --format=comma -t -p
+ls -1 -A -m -t |sed 's/ //g'
