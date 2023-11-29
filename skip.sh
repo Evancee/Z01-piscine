@@ -1,1 +1,1 @@
- ls -l | awk 'NR%2==1' | sed '1d'
+ls -l | awk 'NR%2==1'
