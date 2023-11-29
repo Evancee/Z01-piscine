@@ -2,12 +2,21 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/01-edu/z01"
+	"os"
 )
 
+func PrintRune(r rune) error {
+	if _, err := fmt.Printf("%c", r); err != nil {
+		return err
+	}
+	return nil
+}
+
 func main() {
-	z01.PrintRune('a')
-	z01.PrintRune('\n')
-	fmt.Println("abcdefghijklmnopqrstuvwxyz")
+	for _, r := range "abcdefghijklmnopqrstuvwxyz" {
+		if err := PrintRune(r); err != nil {
+			fmt.Fprintf(os.Stderr, "Error printing rune: %v\n", err)
+			os.Exit(1)
+		}
+	}
 }
