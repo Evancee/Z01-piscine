@@ -1,36 +1,21 @@
-package main
+package piscine
 
-import (
-	"fmt"
-	"sort"
-)
-
-func main() {
-	var nums []int
-	for i := 100; i < 1000; i++ {
-		if isValid(i) {
-			nums = append(nums, i)
+import "github.com/01-edu/z01"
+func printcomb() {
+	for x := '0' ; x <= '9' ; x++ {
+		for y := '1' y <= '9' ; y++ {
+			for z := '2' ; z <= '9' ; z++ {
+				if x < y && y < z {
+					z01.PrintRune(x)
+					z01.PrintRune(y)
+					z01.PrintRune(z)
+					if x != '7' || y != '8' || z != '9' {
+						z01.PrintRune(',')
+						z01.PrintRune(' ')
+					}
+				}
+			}
 		}
 	}
-	sort.Ints(nums)
-	printCombos(nums)
-}
-
-func isValid(num int) bool {
-	digits := getDigits(num)
-	return digits[0] < digits[1] && digits[1] < digits[2]
-}
-
-func getDigits(num int) []int {
-	return []int{num / 100, (num / 10) % 10, num % 10}
-}
-
-func printCombos(nums []int) {
-	for i, num := range nums {
-		if i > 0 {
-			fmt.Print(", ")
-		}
-		fmt.Print(num)
-	}
-	fmt.Println()
+    z01.PrintRune('\n')
 }
