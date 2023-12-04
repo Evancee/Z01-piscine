@@ -3,9 +3,9 @@ package piscine
 import "github.com/01-edu/z01"
 
 func printcomb() {
-	for x := '0' ; x <= '9' ; x++ {
-		for y := '1' ; y <= '9'; y++ {
-			for z := '2' ; z <= '9' ; z++ {
+	for x := '0'; x <= '9'; x++ {
+		for y := '1'; y <= '9'; y++ {
+			for z := '2'; z <= '9'; z++ {
 				if x < y && y < z {
 					z01.PrintRune(x)
 					z01.PrintRune(y)
@@ -18,5 +18,5 @@ func printcomb() {
 			}
 		}
 	}
-    z01.PrintRune('\n')
+	z01.PrintRune('\n')
 }
