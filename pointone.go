@@ -1,14 +1,5 @@
-package main
+package piscine
 
-import "fmt"
-
-func giveOne(n *int) {
+func PointOne(n *int) {
 	*n = 1
-}
-
-func main() {
-	myNum := 5
-	fmt.Println("Before: ", myNum)
-	giveOne(&myNum)
-	fmt.Println("After: ", myNum)
 }
