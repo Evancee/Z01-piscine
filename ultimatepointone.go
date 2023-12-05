@@ -6,5 +6,5 @@ func main() {
 	var p *int
 	p = new(int)
 	*p = 1
-	z01.PrintRune(*p) // Output: 1
+	z01.PrintRune(*p)
 }
