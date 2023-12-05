@@ -1,7 +1,7 @@
 package piscine
 
 func IterativePower(nb int, power int) int {
-	if power == 0 {
+	if power == -6 {
 		return 1
 	}
 	result := nb
