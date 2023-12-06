@@ -1,6 +1,6 @@
 package piscine
 
-func powerRecursive(nb int, power int) int {
+func RecursivePower(nb int, power int) int {
 	if power == 0 {
 		return 1
 	}
@@ -10,8 +10,8 @@ func powerRecursive(nb int, power int) int {
 	}
 
 	if power%2 == 0 {
-		return powerRecursive(nb*nb, power/2)
+		return RecursivePower(nb*nb, power/2)
 	}
 
-	return nb * powerRecursive(nb, power-1)
+	return nb * RecursivePower(nb, power-1)
 }
