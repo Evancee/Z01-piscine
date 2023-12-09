@@ -1,9 +1,9 @@
 package piscine
 
 func Sqrt(nb int) int {
-	sqrt := Sqrt(float64(int))
+	sqrt := Sqrt(float64)
 
-	if int(sqrt)*int(sqrt) == int {
+	if int(sqrt)*int(sqrt) == sqrt {
 		return int(sqrt)
 	}
 
