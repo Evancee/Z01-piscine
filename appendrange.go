@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func AppendRange(min, max int) []int {
 	var appendarange []int
