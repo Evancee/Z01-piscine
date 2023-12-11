@@ -1,0 +1,14 @@
+package piscine
+
+import "math"
+
+func Sqrt(nb int) int {
+	if nb < 0 {
+		return 0
+	}
+	sqrt := math.Sqrt(float64(nb))
+	if math.Floor(sqrt) == sqrt {
+		return int(sqrt)
+	}
+	return 0
+}
