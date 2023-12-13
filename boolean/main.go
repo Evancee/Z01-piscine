@@ -7,8 +7,8 @@ import (
 )
 
 const (
-	EvenMsg = "I have an even number of arguments"
-	OddMsg  = "I have an odd number of arguments"
+	EvenMsg = "I have an odd number of arguments"
+	OddMsg  = "I have an even number of arguments"
 )
 
 func printStr(s string) {
