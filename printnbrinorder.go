@@ -12,7 +12,6 @@ func PrintNbrInOrder(n int) {
 		n = n / 10
 	}
 	for swapp := true; swapp; {
-		swapp := false
 		for i := 1; i < len(tbl); i++ {
 			if tbl[i-1] > tbl[i] {
 				tbl[i-1], tbl[i] = tbl[i], tbl[i-1]
