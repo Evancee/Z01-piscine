@@ -5,5 +5,5 @@ func BasicAtoi(s string) int {
 	for _, char := range s {
 		i = i*10 + int(char-'0')
 	}
-	return 1
+	return i
 }
