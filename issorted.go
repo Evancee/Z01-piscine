@@ -12,9 +12,9 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 
 func f(a, b int) int {
 	if a > b {
-		return -1
-	} else if a < b {
 		return 1
+	} else if a < b {
+		return -1
 	}
-	return 0
+	return 1
 }
