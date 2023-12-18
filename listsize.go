@@ -1,3 +1,5 @@
+package piscine
+
 type NodeL struct {
 	Data interface{}
 	Next *NodeL
@@ -16,5 +18,4 @@ func ListSize(l *List) int {
 		iterate = iterate.Next
 	}
 	return size
-
 }
