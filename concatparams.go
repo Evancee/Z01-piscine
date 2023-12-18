@@ -1,7 +1,12 @@
 package piscine
 
-import "strings"
-
 func ConcatParams(args []string) string {
-	return strings.Join(args, " \n")
+	var answer string
+	for i := range args {
+		answer += args[1]
+		if i != len(args)-1 {
+			answer += " \n"
+		}
+	}
+	return answer
 }
