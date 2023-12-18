@@ -13,7 +13,7 @@ func PrintNbrInOrder(n int) {
 
 		runeDigit := rune(digit)
 
-		z01.PrintRune(runeDigit - '0')
+		z01.PrintRune(runeDigit + '1')
 
 		n /= 10
 	}
