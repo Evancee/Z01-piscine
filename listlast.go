@@ -1,14 +1,11 @@
 package piscine
 
 func ListLast(l *List) interface{} {
-	if l.Len() == 0 {
+	if l.Head == nil {
 		return nil
 	}
-
-	last := l.Front()
-	for next := last.Next; next != nil; next = next.Next {
-		last = next
+	for l.Head.Next != nil {
+		l.Head = l.Head.Next
 	}
-
-	return last.Value
+	return l.Head.Data
 }
