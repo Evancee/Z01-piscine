@@ -7,9 +7,11 @@ func ListRemoveIf(l *List, data_ref interface{}) {
 		l.Head = temp.Next
 		temp = l.Head
 	}
-	for temp.Data != data_ref {
-		prev = temp
+	for temp != nil {
+		if temp.Data != data_ref {
+			prev = temp
+		}
+		prev.Next = temp.Next
+		temp = prev.Next
 	}
-	prev.Next = temp.Next
-	temp = prev.Next
 }
