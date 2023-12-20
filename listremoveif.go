@@ -1,15 +1,15 @@
 package piscine
 
 func ListRemoveIf(l *List, data_ref interface{}) {
-	node := l.Head
+	temp := l.Head
 	prev := l.Head
-	for node != nil && node.Data != data_ref {
-		prev = node
-		node = node.Next
+	for temp != nil && temp.Data == data_ref {
+		l.Head = temp.Next
+		temp = l.Head
 	}
-	if node != nil {
-		return
+	for temp.Data != data_ref {
+		prev = temp
 	}
-	prev.Next = node.Next
-	node = prev.Next
+	prev.Next = temp.Next
+	temp = prev.Next
 }
