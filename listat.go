@@ -6,13 +6,14 @@ type NodeL struct {
 }
 
 func ListAt(l *NodeL, pos int) *NodeL {
-	lens := 1
-	for l != nil {
-		lens++
-		if pos == lens {
-			return l
+	if l == nil {
+		return nil
+	}
+	for i := 0; i < pos; i++ {
+		if l.Next == nil {
+			return nil
 		}
 		l = l.Next
 	}
-	return nil
+	return l
 }
